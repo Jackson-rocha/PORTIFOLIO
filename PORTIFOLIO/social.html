@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/colrs-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--style switcher-->
+    <link rel="stylesheet" href="css/skins/colrs-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/colrs-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/colrs-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/colrs-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/colrs-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
     
 </head>
 <body>
@@ -21,16 +28,16 @@
                 <span></span>
             </div>
             <ul class="nav">
-                <li><a href="" class="active"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href=""><i class="fa fa-user"></i>About</a></li>
-                <li><a href=""><i class="fa fa-list"></i>Services</a></li>
-                <li><a href=""><i class="fa fa-briefcase"></i>Portifoilio</a></li>
-                <li><a href=""><i class="fa fa-comments"></i>contact</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#service"><i class="fa fa-list"></i>Services</a></li>
+                <li><a href="#portifolio"><i class="fa fa-briefcase"></i>Portifoilio</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>contact</a></li>
             </ul>
         </div>
         <!-- Aside End-->
         <!-- Main Content Start-->
-        <div class="main-content">
+        <div class="main-content" id="home">
             <!-- Main section start-->
             <section class="home section">
                 <div class="container">
@@ -49,7 +56,7 @@
             </section>
             <!-- home section end-->
             <!-- about section start-->
-            <section class="about section ">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -207,7 +214,7 @@
             </section>
             <!-- About section end-->
             <!-- Services Section Start-->
-            <section class="service section">
+            <section class="service section" id="service">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15" >
@@ -286,7 +293,7 @@
             </section>
             <!-- Services Section End-->
             <!--Portifolio Section start-->
-            <section  class="portifolio section">
+            <section  class="portifolio section" id="portifolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15" >
@@ -358,7 +365,7 @@
             </section>
             <!--Portifolio Section end-->
             <!--contact Section start-->
-            <section class="contact section">
+            <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15" >
@@ -442,7 +449,26 @@
         <!-- Main content end-->
     </div>
     <!-- Main container end-->
+    <!-- Style switcher start-->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog  fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-moon"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- Style switcher end-->
     <!-- JS Files-->
     <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
 </body>
 </html>
